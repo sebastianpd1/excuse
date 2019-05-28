@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<p id="excuse">OMG, you will not believe me but...</p>
+<p id="the_excuse"></p>
+
+<script>
+
+    function generateExcuse () {
+        let who = ['the dog', 'my granma', 'his turtle', 'my bird'];
+        let what = ['eat', 'pissed', 'crushed', 'broked'];
+        let avoid = ['my homework', 'the test', 'tme meeting', 'my appointment'];
+        let when = ['before the class', 'right in time', 'when I finished', 'during my lunch', 'while I was praying'];
+
+        let whoIndx = Math.floor(Math.random() * who.length);
+        let whatIndx = Math.floor(Math.random() * what.length);
+        let avoidIndx = Math.floor(Math.random() * avoid.length);
+        let whenIndx = Math.floor(Math.random() * when.length);
+
+        return who[whoIndx] + " " + what[whatIndx] + " " + avoid[avoidIndx] + " " + when[whenIndx];
+
+    }
+
+    window.onload = function() {
+        document.querySelector('#the_excuse').innerHTML = generateExcuse();
+    };
+
+
+
+
+
+</script>
+
+</body>
+</html>
